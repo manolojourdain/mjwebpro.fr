@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mjwebpro.fr/sitemap.xml
