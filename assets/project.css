@@ -1,0 +1,34 @@
+/* Page projet : priorité mobile, même DA que l'accueil.
+   Aucun panneau, le fondu agit seulement sur le fond animé. */
+.project-page{min-height:100svh;display:flex;flex-direction:column}
+.project-page #wave{opacity:.26}
+.project-back{font-size:13px;min-height:44px;display:inline-flex;align-items:center;color:var(--muted)}
+.project-layout{width:89%;max-width:1050px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:26px;align-items:start;padding:calc(var(--top) + 32px) 0 44px}
+.project-heading h1{font-size:clamp(40px,9vw,74px);font-weight:500;letter-spacing:-.065em;line-height:1.05;margin:12px 0 15px}
+.project-heading p{color:var(--muted);max-width:42ch;text-shadow:0 1px 5px #000}
+#project-form{min-width:0;background:none;border:0;padding:0}
+#project-form fieldset{margin:0 0 20px}
+#project-form label{margin-top:19px;color:#ededed;font-weight:500;text-shadow:0 1px 4px #000}
+#project-form input,#project-form textarea,#project-form select{
+  background:transparent;border:0;border-bottom:1px solid #a3a3a3;border-radius:0;
+  min-height:48px;margin-top:7px;padding:10px 2px;color:#fff;font-size:16px;
+}
+#project-form textarea{min-height:105px}
+#project-form input:focus,#project-form textarea:focus,#project-form select:focus{border-bottom-color:#fff;box-shadow:0 1px 0 #fff}
+#project-form :focus-visible{outline:2px solid #fff;outline-offset:3px}
+#project-form select option{background:#111;color:#fff}
+#project-form .send{min-height:48px;width:100%;margin-top:22px;padding-inline:25px;background:#eee;color:#111;border-radius:60px}
+#project-form [role=status]{line-height:1.5}
+.project-page .fine{text-shadow:0 1px 5px #000}
+.project-page footer{margin-top:auto}
+
+/* Grand écran : le motif subsiste autour du contenu, sans bord de panneau.
+   L'opacité du motif baisse en douceur sur un large rayon autour du formulaire. */
+@media(min-width:768px){
+  .project-page #wave{opacity:.62;-webkit-mask-image:radial-gradient(ellipse 52% 79% at 70% 48%,transparent 0%,rgba(0,0,0,.12) 30%,rgba(0,0,0,.48) 61%,#000 100%);mask-image:radial-gradient(ellipse 52% 79% at 70% 48%,transparent 0%,rgba(0,0,0,.12) 30%,rgba(0,0,0,.48) 61%,#000 100%)}
+  .project-back{font-size:14px}
+  .project-layout{width:87%;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10%;padding:calc(var(--top) + 64px) 0 64px}
+  .project-heading h1{font-size:clamp(40px,5.2vw,74px);margin:18px 0 24px}
+  .project-heading p{max-width:35ch}
+  #project-form .send{width:auto}
+}

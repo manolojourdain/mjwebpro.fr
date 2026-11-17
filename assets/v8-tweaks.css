@@ -1,0 +1,48 @@
+/* V8 : ajustements ciblés. La DA, la typographie, le fond Three.js et les sections V7 sont conservés. */
+.hero-copy .position{max-width:960px;margin-left:auto;margin-right:auto}
+.hero-copy p{max-width:780px;line-height:1.65;letter-spacing:.005em}
+#offres .price-grid article{grid-template-rows:auto minmax(66px,auto) minmax(78px,auto) auto 1fr auto auto;row-gap:12px}
+#offres .price-grid h3{overflow-wrap:break-word;hyphens:auto}
+#offres .price-grid .price-block{min-width:0}
+#offres .price-grid .price-block p{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 7px}
+#offres .price-grid .price-block strong{font-variant-numeric:tabular-nums}
+#offres .price-grid .price-block p span{color:#bdbdc0;font-size:13px}
+#offres .price-grid .underlink{font-size:13px;min-height:48px}
+#offres .price-grid details{margin-top:10px;align-self:start}
+#offres .price-grid details summary{min-height:48px}
+.price-footnote{max-width:770px;margin-top:25px;border-top:1px solid #ffffff30;padding-top:18px;color:#bcbcc0;font-size:13px;line-height:1.6}
+.verified-review{margin-top:24px;padding:19px 0;border-top:1px solid #ffffff3b;border-bottom:1px solid #ffffff26}
+.review-stars{color:#fff!important;font-size:21px!important;letter-spacing:.11em;line-height:1.1;margin:12px 0 8px!important}
+.review-title{font-size:18px!important;color:#eee!important;margin:0 0 5px!important}
+.review-caption{font-size:12px!important;color:#bdbdc1!important;line-height:1.65}
+#offres .price-grid a:hover,#offres .price-grid summary:hover{text-decoration-color:#fff}
+@media(max-width:1040px){#offres .price-grid article{grid-template-rows:auto auto auto auto 1fr auto auto}}
+@media(max-width:767px){.hero{min-height:100svh}.hero-copy{padding:0 2px}.hero-copy .position{font-size:clamp(24px,6.4vw,36px)}.hero-copy p{font-size:15px;max-width:35ch;line-height:1.75;margin-top:18px}#offres .price-grid article{display:block;padding:26px 0 28px}.price-grid h3{font-size:clamp(25px,6vw,30px)}.price-block{padding:14px 0}.price-grid li{margin:7px 0}.price-footnote{font-size:12px}#offres .price-grid .underlink{min-height:48px}.verified-review{margin-top:24px}#offres .price-shell{padding:0}}
+@media(max-width:350px){.brand{letter-spacing:.1em}.top-actions .pill{font-size:11px;padding:8px}.wordmark{font-size:clamp(39px,11vw,50px)}.hero-copy p{font-size:14px}}
+
+/* Retouches demandées le 17/11 : séparation des services et méthode. */
+.hero-services{list-style:none;padding:0;margin:20px auto 15px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 0;color:#c2c2c6;font-size:clamp(13px,1.3vw,19px);line-height:1.5}
+.hero-services li{padding:0 17px;white-space:nowrap}
+.hero-services li+li{border-left:1px solid #ffffff65}
+.steps li::marker{font-size:20px;font-weight:500;color:#dedede}
+#projets .verified-review{margin-top:0}
+@media(max-width:767px){.hero-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;max-width:365px;font-size:14px;margin-top:22px}.hero-services li{padding:9px 5px;white-space:normal;border-bottom:1px solid #ffffff30}.hero-services li:nth-child(odd){border-left:0}.hero-services li:nth-child(n+3){border-bottom:0}.steps li::marker{font-size:18px}}
+
+
+/* Restauration V8 : aucun changement des offres ni de la méthode. */
+body:has(#wave){isolation:isolate}
+.hero-services{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 0}
+.hero-services span{display:block;padding:0 17px;white-space:nowrap}
+.hero-services span+span{border-left:1px solid #ffffff65}
+.client-references{margin:0 0 26px}
+.client-references div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--edge)}
+.client-references strong{font-size:14px;font-weight:500}
+.client-references span{font-size:13px;color:var(--muted);text-align:right}
+@media(max-width:767px){
+ .hero-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;max-width:385px;margin:22px auto 15px;font-size:14px}
+ .hero-services span{padding:10px 5px;white-space:normal;border-bottom:1px solid #ffffff30}
+ .hero-services span:nth-child(odd){border-left:0}
+ .hero-services span:nth-child(n+3){border-bottom:0}
+ .client-references div{gap:4px;flex-direction:column;padding:10px 0}
+ .client-references span{text-align:left}
+}
