@@ -1,2 +1,9 @@
-<?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://mjwebpro.fr/confidentialite.html</loc></url><url><loc>https://mjwebpro.fr/</loc></url><url><loc>https://mjwebpro.fr/mentions-legales.html</loc></url><url><loc>https://mjwebpro.fr/projet.html</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mjwebpro.fr/</loc><lastmod>2026-11-27</lastmod></url>
+  <url><loc>https://mjwebpro.fr/radar/</loc><lastmod>2026-11-27</lastmod></url>
+  <url><loc>https://mjwebpro.fr/projet.html</loc><lastmod>2026-11-27</lastmod></url>
+  <url><loc>https://mjwebpro.fr/mentions-legales.html</loc><lastmod>2026-11-27</lastmod></url>
+  <url><loc>https://mjwebpro.fr/confidentialite.html</loc><lastmod>2026-11-27</lastmod></url>
+  <url><loc>https://mjwebpro.fr/creation-site-internet-vannes/</loc><lastmod>2026-11-27</lastmod></url>
+</urlset>
