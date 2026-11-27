@@ -90,3 +90,24 @@
   #offres .price-grid:has(> #radar-offre)>article small,
   #offres .price-grid:has(> #radar-offre)>article .mobile-offer-short{min-height:0}
 }
+
+/* Lecture mobile : accueil court et offres compactes, sans changer la grille bureau. */
+@media(max-width:767px){
+  #accueil.scene.hero{min-height:0;padding:calc(var(--top) + env(safe-area-inset-top,0px) + 32px) 0 30px}
+  #accueil .hero-copy .wordmark{font-size:clamp(36px,10.5vw,48px);line-height:1.05}
+  #accueil .hero-copy .position{font-size:clamp(21px,5.6vw,26px);margin:12px 0 20px;line-height:1.2}
+  #accueil .hero-services{margin:12px auto;max-width:100%}
+  #accueil .hero-services span{font-size:12px;min-height:40px;padding:8px 4px}
+  #accueil .hero-services:has(>a){display:block;margin:18px auto 0}
+  #accueil .hero-services>a{display:flex;justify-content:center;align-items:center;min-height:44px}
+  #accueil .hero-services>a>span{border:0;font-size:13px;min-height:0}
+  #offres.scene{padding-top:22px}
+  #offres .price-grid:has(> #radar-offre)>article{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto;gap:6px 12px;padding:16px 0;align-items:center}
+  #offres .price-grid:has(> #radar-offre)>article>h3{grid-column:1/-1;grid-row:1;order:initial;font-size:20px;line-height:1.2;margin:0;min-height:0}
+  #offres .price-grid:has(> #radar-offre)>article>small{display:none}
+  #offres .price-grid:has(> #radar-offre)>article>.mobile-offer-short{grid-column:1/-1;grid-row:2;order:initial;min-height:0;margin:0;font-size:13px;line-height:1.4}
+  #offres .price-grid:has(> #radar-offre)>article>.price-block{grid-column:1;grid-row:3;order:initial;padding:0}
+  #offres .price-grid:has(> #radar-offre)>article>.price-block p{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px}
+  #offres .price-grid:has(> #radar-offre)>article>.price-block p span{display:inline;font-size:11px}
+  #offres .price-grid:has(> #radar-offre)>article>.mobile-offer-more{grid-column:2;grid-row:3;order:initial;margin:0;min-height:44px;gap:12px;font-size:12px}
+}
