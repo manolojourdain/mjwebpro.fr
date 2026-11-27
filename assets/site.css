@@ -15,3 +15,28 @@ dialog{color:#eee;background:#090909;border:1px solid #555;border-radius:18px;wi
 .copy-message{min-height:44px;margin-inline-start:6px;font-size:14px;text-decoration:underline;text-underline-offset:4px}.brand,.legal header a,.legal footer a{min-height:44px}.legal header a,.legal footer a{display:inline-flex;align-items:center}form [role=status]{white-space:pre-line}
 
 .case-study{border-top:1px solid var(--edge);padding-top:18px}.case-study h3{font-size:clamp(24px,2.8vw,36px);font-weight:500;line-height:1.2;letter-spacing:-.05em;margin:14px 0}.case-study p,.case-study li{color:#c7c7ca;font-size:14px}.case-study ul{padding-left:21px;margin:15px 0}.case-study li{padding:4px 0}.case-measure{border-top:1px solid var(--edge);padding-top:15px;display:flex;align-items:flex-start;gap:16px}.case-measure strong{font-size:30px;white-space:nowrap;color:#fff}.case-measure span{font-size:12px}.case-note{margin-top:16px;color:#b9b9bd;font-size:12px}@media(max-width:767px){.case-measure{display:block}.case-measure span{display:block;margin-top:8px}}
+
+@view-transition{navigation:auto}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+
+
+/* Transitions légères : interactions et navigation entre pages. */
+@media(prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation: mj-page-out 180ms ease both}
+  ::view-transition-new(root){animation: mj-page-in 260ms cubic-bezier(.2,.65,.3,1) both}
+  @keyframes mj-page-out{to{opacity:0}}
+  @keyframes mj-page-in{from{opacity:0}to{opacity:1}}
+  @keyframes mj-detail-in{from{opacity:0;translate:0 -4px}to{opacity:1;translate:0 0}}
+  .site-header a,.pill,.underlink,.send,.mobile-offer-more,.detail-close,.contact-links a,.hero-services a,.project-back,summary,.rail a,footer a{
+    transition:color 160ms ease,background-color 180ms ease,border-color 180ms ease,opacity 160ms ease,scale 140ms ease;
+  }
+  @media(hover:hover){
+    .pill:hover{background-color:#ffffff10;border-color:#ffffff75;text-decoration:none}
+    .site-header a:hover,.hero-services a:hover,.underlink:hover,.contact-links a:hover,.project-back:hover,summary:hover,.mobile-offer-more:hover,.detail-close:hover,footer a:hover{color:#fff}
+    .send:hover{background-color:#fff}
+  }
+  .pill:active,.send:active,.underlink:active,.mobile-offer-more:active,.detail-close:active,.site-header a:active,.contact-links a:active,.hero-services a:active,.rail a:active,footer a:active,summary:active{scale:.985;opacity:.82}
+  .price-grid details[open]>:not(summary),.concepts details[open]>:not(summary),details.concepts[open]>:not(summary),.optional-company[open]>:not(summary),.mobile-offer-panel:not([hidden]){
+    animation:mj-detail-in 220ms cubic-bezier(.2,.65,.3,1) both;
+  }
+}

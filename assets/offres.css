@@ -76,3 +76,17 @@
 
 #offres .price-grid .offer-feature{background:linear-gradient(180deg,#ffffff0d,transparent 70%);border-top:1px solid #ffffff45}
 #offres .price-grid .offer-feature small{color:#fff}
+
+/* Radar : formulaire intégré et offres lisibles sur mobile. */
+#radar.scene{padding-top:calc(var(--top) + 20px)}
+#radar .split>*{min-width:0}
+#radar .follow-up>.contact-links{width:100%;justify-items:stretch}
+#radar form{width:100%}
+#radar .send{max-width:100%;white-space:normal}
+@media(max-width:767px){
+  #offres .price-grid:has(> #radar-offre){grid-template-columns:minmax(0,1fr)!important}
+  #offres .price-grid:has(> #radar-offre)>article{grid-column:auto;padding-inline:0;border-right:0}
+  #offres .price-grid:has(> #radar-offre)>article h3,
+  #offres .price-grid:has(> #radar-offre)>article small,
+  #offres .price-grid:has(> #radar-offre)>article .mobile-offer-short{min-height:0}
+}

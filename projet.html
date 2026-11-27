@@ -14,8 +14,8 @@
   <link rel="icon" href="/assets/brand.webp">
   <link rel="apple-touch-icon" href="/mj-web-pro-logo.png">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/assets/site.css">
-  <link rel="stylesheet" href="/assets/offres.css">
+  <link rel="stylesheet" href="/assets/site.css?v=20261127-motion">
+  <link rel="stylesheet" href="/assets/offres.css?v=20261127-radar-form">
   <link rel="stylesheet" href="/assets/v8-tweaks.css?v=20261117-3d">
   <link rel="stylesheet" href="/assets/project.css?v=20261117-fondu">
   <link rel="stylesheet" href="/assets/v9-project.css?v=20261117-v91">
@@ -23,11 +23,18 @@
   <script type="module" src="/assets/v9-project-ui.js?v=20261117-v9"></script>
   <script type="module" src="/assets/wave.js?v=20261117-v9"></script>
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://mjwebpro.fr/projet.html">
-</head>
+<script type="module" src="/assets/site.js?v=20261117-v9"></script><link rel="stylesheet" href="/assets/v9-mobile.css?v=20261127-radar-five-final"></head>
 <body class="project-page">
 <div id="wave" aria-hidden="true"></div>
 <a class="skip" href="#project-form">Aller au formulaire</a>
-<header class="site-header"><a class="brand" href="/" aria-label="MJ Web Pro, accueil"><img src="/assets/brand.webp" width="36" height="36" alt=""><span>MJ WEB PRO</span></a><a class="project-back" href="/#offres">Retour aux offres</a></header>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="MJ Web Pro, accueil"><img src="/assets/brand.webp" width="36" height="36" alt=""><span>MJ WEB PRO</span></a>
+  <nav id="menu" aria-label="Navigation principale"><a class="mobile-nav-extra" href="/#accueil">Accueil</a>
+    <a href="/#offres">Offres &amp; tarifs</a><a href="/#methode">Méthode</a><a href="/#projets">Réalisations</a><a href="/#contact">Contact</a><a href="/radar/">Radar Chantiers</a>
+    <div class="mobile-nav-contact"><small>Un projet ?</small><a href="/projet.html">Parler de mon projet</a><a href="mailto:contact@mjwebpro.fr">contact@mjwebpro.fr</a><a href="https://wa.me/message/RNPAE3U4YJESM1" rel="noreferrer">Écrire sur WhatsApp</a></div>
+  </nav>
+  <div class="top-actions"><a class="pill" href="/projet.html">Parler de mon projet</a><button type="button" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button></div>
+</header>
 <main class="project-layout"><div class="project-heading"><small>Contact</small><h1>Parlons de<br> votre projet.</h1><p class="project-intro">Décrivez votre projet. Je vous répondrai par e-mail.</p></div>
 <section id="project-form" aria-label="Votre demande de projet">
 <form novalidate><fieldset name="entry"><label>Prestation (facultatif)<select name="offer"><option value="">À préciser ensemble</option><option>Acquisition &amp; conversion</option><option>Sécurité</option><option>Présence &amp; visibilité</option><option>IA &amp; automatisations</option></select></label>

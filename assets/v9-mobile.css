@@ -82,3 +82,38 @@
  #offres .mobile-offer-panel{scroll-margin-top:calc(var(--top) + 12px)}
  #offres .mobile-offer-panel .custom-scope{border-top:1px solid var(--edge);padding-top:9px}
 }
+
+
+/* Radar : grille de cinq offres, uniquement lorsque la cinquième carte existe. */
+@media (min-width:1100px) {
+  #offres:has(#radar-offre){width:min(1320px,89%);min-height:calc(100svh - var(--top));padding-block:32px 28px}
+  #offres:has(#radar-offre) .price-shell header{margin-bottom:24px}
+  #offres:has(#radar-offre) .price-footnote{margin-top:15px;padding-top:12px}
+  #offres .price-grid:has(> #radar-offre){grid-template-columns:repeat(5,minmax(0,1fr));row-gap:8px}
+  #offres .price-grid:has(> #radar-offre)>article{
+    min-width:0;
+    padding-inline:clamp(10px,1.25vw,20px);
+    grid-row:span 7;
+    grid-template-rows:subgrid;
+    row-gap:8px
+  }
+  #offres .price-grid:has(> #radar-offre)>article:first-child{padding-left:0}
+  #offres .price-grid:has(> #radar-offre)>article:last-child{padding-right:0}
+}
+@media (min-width:1100px) and (max-width:1280px){
+  #offres .price-grid:has(> #radar-offre) .offer-promise,#offres .price-grid:has(> #radar-offre) li{font-size:13px;line-height:1.45}
+}
+@media (max-width:1099px) {
+  #offres .price-grid:has(> #radar-offre){grid-template-columns:repeat(2,minmax(0,1fr))}
+  #offres .price-grid>#radar-offre{
+    grid-column:1/-1;
+    padding-inline:0;
+    border-right:0;
+    border-top:1px solid var(--edge)
+  }
+  #offres .price-grid>#radar-offre::before{display:none}
+}
+@media (max-width:767px){
+  #offres .price-grid>#radar-offre h3,#offres .price-grid>#radar-offre small,
+  #offres .price-grid>#radar-offre .mobile-offer-short{min-height:0}
+}
